@@ -1,5 +1,5 @@
 %%%
-title = "Barreto-Lynn-Scott Key Representations for JOSE and COSE"
+title = "Barreto-Lynn-Scott Elliptic Curve Key Representations for JOSE and COSE"
 ipr= "none"
 area = "Internet"
 workgroup = "none"
