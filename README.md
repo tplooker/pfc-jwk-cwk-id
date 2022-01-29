@@ -1,6 +1,6 @@
-# Barreto-Lynn-Scott Key Representations for JOSE and COSE
+# Barreto-Lynn-Scott Elliptic Curve Key Representations for JOSE and COSE
 
-This is the working area for the individual Internet-Draft, "Barreto-Lynn-Scott Key Representations for JOSE and COSE".
+This is the working area for the individual Internet-Draft, "Barreto-Lynn-Scott Elliptic Curve Key Representations for JOSE and COSE".
 
 * [Editor's Copy](https://tplooker.github.io/pfc-jwk-cwk-id/#go.draft-looker-bls-jose-cose.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-looker-bls-jose-cose)
