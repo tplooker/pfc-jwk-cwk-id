@@ -31,85 +31,36 @@ This specification defines how to represent cryptographic keys for the pairing f
 
 This specification defines how to represent cryptographic keys for the pairing friendly elliptic curve known as Barreto-Lynn-Scott, for use within the key representation formats of JSON Web Key (JWK) and COSE (COSE_Key). The elliptic curve and associated algorithm are registered in appropriate IANA JOSE and COSE registries.
 
-## Bls12-381 Curve
+## Definition
 
-The following definitions apply to the pairing friendly elliptic curve known as Barreto-Lynn-Scott (BLS) featuring an embedding degree 12 with 381-bit p "BLS12-381".
+The following definitions apply to the pairing friendly elliptic curves known as the Barreto-Lynn-Scott (BLS) curves.
 
-### Bls12381G1 JSON Web Key (JWK) Representation
+### JSON Web Key Representation
 
-A cryptographic key on this curve in the subgroup of G1 defined as `E(GF(p))` of order r, is represented in a JSON Web Key (JWK) [RFC7517] using the following values:
+When expressing a cryptographic key for these curves in JSON Web Key (JWK) form, the following rules apply:
 
-- "kty": "OKP"
-- "crv": "Bls12381G1"
+- The parameter "kty" MUST be present and set to "OKP"
+- The parameter "crv" MUST be present and value MUST be one defined in (#curve-parameter-registration).
+- The parameter "x" MUST be present whose value represents the curve point for the public key. This value MUST be encoded using the Z-Cash serialization defined in [DPFC09] and MUST be base64url encoded without padding as defined in [RFC7515] Appendix C.
+- The parameter "d" MUST be present for private key representations whose value MUST contain the little endian representation of the private key encoded using base64url encoded without padding as defined in [RFC7515] Appendix C. This parameter MUST NOT be present for public keys.
 
-plus the "x" value to represent the curve point for the public key.  The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09] [DPFC09] and MUST be base64url encoded without padding as defined in [RFC7515] Appendix C.
+### COSE_Key Representation
 
-### Bls12381G1 COSE_Key Representation
+When expressing a cryptographic key for these curves in COSE_Key form, the following rules apply:
 
-A cryptographic key on this curve in the subgroup of G1 defined as `E(GF(p))` of order r, is represented in a COSE_Key [RFC8152] using the following values:
+- The parameter "kty" (1) MUST be present and set to "OKP" (1)
+- The parameter "crv" (-1) MUST be present and value MUST be one defined in (#curve-parameter-registration).
+- The parameter "x" (-2) MUST be present whose value represents the curve point for the public key. This value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
+- The parameter "d" (-4) MUST be present for private key representations whose value MUST contain the little endian representation of the private key.
 
-- "kty" (1): "OKP" (1)
-- "crv" (-1): "Bls12381G1" (13)
+### Curve Parameter Registration
 
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
-
-### Bls12381G2 JSON Web Key (JWK) Representation
-
-A cryptographic key on this curve in the subgroup of G2 defined as `E(GF(p^2))` of order r, is represented in a JSON Web Key (JWK) [RFC7517] using the following values:
-
-- "kty": "OKP"
-- "crv": "Bls12381G2"
-
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
-
-### Bls12381G2 COSE_Key Representation
-
-A cryptographic key on this curve in the subgroup of G2 defined as `E(GF(p^2))` of order r, is represented in a COSE_Key [RFC8152] using the following values:
-
-- "kty" (1): "OKP" (1)
-- "crv" (-1): "Bls12381G2" (14)
-
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
-
-## Bls48-581 Curve
-
-The following definitions apply to the pairing friendly elliptic curve known as Barreto-Lynn-Scott (BLS) featuring an embedding degree 48 with 581-bit p "BLS12-381".
-
-### Bls48581G1 JSON Web Key (JWK) Representation
-
-A cryptographic key on this curve in the subgroup of G1 defined as `E(GF(p))` of order r, is represented in a JSON Web Key (JWK) [RFC7517] using the following values:
-
-- "kty": "OKP"
-- "crv": "Bls48581G1"
-
-plus the "x" value to represent the curve point for the public key.  The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09] and MUST be base64url encoded without padding as defined in [RFC7515] Appendix C.
-
-### Bls48581G1 COSE_Key Representation
-
-A cryptographic key on this curve in the subgroup of G1 defined as `E(GF(p))` of order r, is represented in a COSE_Key [RFC8152] using the following values:
-
-- "kty" (1): "OKP" (1)
-- "crv" (-1): "Bls48581G1" (15)
-
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
-
-### Bls48581G2 JSON Web Key (JWK) Representation
-
-A cryptographic key on this curve in the subgroup of G2 defined as `E(GF(p^8))` of order r, is represented in a JSON Web Key (JWK) [RFC7517] using the following values:
-
-- "kty": "OKP"
-- "crv": "Bls48581G2"
-
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
-
-### Bls48581G2 COSE_Key Representation
-
-A cryptographic key on this curve in the subgroup of G2 defined as `E(GF(p^8))` of order r, is represented in a COSE_Key [RFC8152] using the following values:
-
-- "kty" (1): "OKP" (1)
-- "crv" (-1): "Bls48581G2" (16)
-
-plus the "x" (-2) value to represent the curve point for the key. The "x" value MUST be encoded using the Z-Cash serialization defined in [DPFC09].
+JWK "crv" value | COSE_Key "crv" value | Description         |
+----------------|----------------------|---------------------|
+Bls12381G1      | 13                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G1 defined as `E(GF(p))` of order r
+Bls12381G2      | 14                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G1 defined as `E(GF(p^2))` of order r
+Bls48581G1      | 15                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G1 defined as `E(GF(p))` of order r
+Bls48581G2      | 16                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G1 defined as `E(GF(p^8))` of order r
 
 # Security Considerations
 
