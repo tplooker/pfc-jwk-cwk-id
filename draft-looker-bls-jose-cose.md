@@ -45,7 +45,7 @@ This specification defines how to represent cryptographic keys for the pairing-f
 
 There are a variety of applications for pairing based cryptography including schemes already published as RFCs, such as Identity-Based Cryptography [@RFC5091] Sakai-Kasahara Key Encryption (SAKKE) [@RFC6508], and Identity-Based Authenticated Key Exchange (IBAKE) [@RFC6539]. SAKKE is applied to Multimedia Internet KEYing (MIKEY) [@RFC6509].
 
-This branch of cryptography has also been used to develop privacy-preserving cryptographic hardware attestations schemes, including the Elliptic Curve Direct Anonymous Attestation (ECDAA) in the Trusted Platform Modules [@TPM] specified by the Trusted Computing Group. Further work on similar schemes has also occurred at the FIDO Alliance and W3C. Similarly, Intel released (EPID) which provides a solution to remote hardware attestation for Intel Software Guard Extension (SGX) enabled environments.
+This branch of cryptography has also been used to develop privacy-preserving cryptographic hardware attestations schemes, including the Elliptic Curve Direct Anonymous Attestation (ECDAA) in the Trusted Platform Modules [@TPM] specified by the Trusted Computing Group. Further work on similar schemes has also occurred at the FIDO Alliance [@ECDAA]. Similarly, Intel released [@EPID] which provides a solution to remote hardware attestation for Intel Software Guard Extension (SGX) enabled environments.
 
 More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature-04], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures, which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving.
 
@@ -258,3 +258,21 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
     <date year="2003"/>
   </front>
 </reference>
+
+<reference anchor="ECDAA" target="https://fidoalliance.org/specs/fido-v2.0-id-20180227/fido-ecdaa-algorithm-v2.0-id-20180227.html">
+  <front>
+    <title>ECDAA Algorithm</title>
+   <author><organization>FIDO Alliance</organization></author>
+    <date year="2018"/>
+  </front>
+</reference>
+
+<reference anchor="EPID" target="https://software.intel.com/en-us/download/intel-sgx-intel-epid-provisioning-and-attestation-services">
+  <front>
+    <title>Intel (R) SGX: Intel (R) EPID Provisioning and Attestation Services</title>
+   <author><organization>Intel Corporation</organization></author>
+  </front>
+</reference>
+
+
+
