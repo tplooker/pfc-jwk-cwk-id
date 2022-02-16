@@ -41,17 +41,17 @@ This specification defines how to represent cryptographic keys for the pairing-f
 
 # Introduction
 
-This specification defines how to represent cryptographic keys for the pairing-friendly elliptic curves known as Barreto-Lynn-Scott [@!BLS], for use within the key representation formats of JSON Web Key (JWK) and COSE (COSE_Key). This specification registers the elliptic curves in appropriate IANA JOSE and COSE registries.
+This specification defines how to represent cryptographic keys for the pairing-friendly elliptic curves known as Barreto-Lynn-Scott [@!BLS], for use within the key representation formats of JSON Web Key (JWK) and COSE_Key. This specification registers the elliptic curves in appropriate IANA JOSE and COSE registries.
 
 There are a variety of applications for pairing based cryptography including schemes already published as RFCs, such as Identity-Based Cryptography [@RFC5091] Sakai-Kasahara Key Encryption (SAKKE) [@RFC6508], and Identity-Based Authenticated Key Exchange (IBAKE) [@RFC6539]. SAKKE is applied to Multimedia Internet KEYing (MIKEY) [@RFC6509].
 
 This branch of cryptography has also been used to develop privacy-preserving cryptographic hardware attestations schemes, including the Elliptic Curve Direct Anonymous Attestation (ECDAA) in the Trusted Platform Modules [@TPM] specified by the Trusted Computing Group. Further work on similar schemes has also occurred at the FIDO Alliance [@ECDAA]. Similarly, Intel released [@EPID] which provides a solution to remote hardware attestation for Intel Software Guard Extension (SGX) enabled environments.
 
-More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature-04], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures, which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving.
+More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature-04], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
 
 There are multiple different pairing-friendly curves in active use; however, this draft focuses on a definition for the Barreto-Lynn-Scott curves due to them being the most "widely used" and "efficient" whilst achieving 128-bit and 256-bit security (BLS12-381 and BLS48-581 respectively).
 
-More extensive discussion on the broader application of pairing based cryptography can be found in [@!id.draft.pairing-friendly-curves-10].
+More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@!id.draft.pairing-friendly-curves-10].
 
 # Conventions and Definitions
 
@@ -90,7 +90,9 @@ Bls48581G2      | TBD (16 requested)                   | A cryptographic key on 
 
 # Security Considerations
 
-See [@!id.draft.pairing-friendly-curves-10] for additional details on security considerations for the curves used.  Implementers should also consider Section 9 of [@!RFC7517] when using this specification.
+See [@!id.draft.pairing-friendly-curves-10] for additional details on security considerations for the curves used.  Implementers should also consider the general guidance provided in Section 9 of [@!RFC7517] and Section 17 of [@!RFC8152] when using this specification.
+
+Furthermore, because this specification only defines the cryptographic key representations and not the usage of these keys with specific algorithms, implementers should be aware to follow any guidance that may be provided around appropriate usage of the keys and or additional steps that may be required to validate the keys within the context of particular algorithms.
 
 # IANA Considerations
 
@@ -274,5 +276,31 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   </front>
 </reference>
 
+<reference anchor="BBS" target="https://identity.foundation/bbs-signature/draft-bbs-signatures.html">
+  <front>
+    <title>The BBS Signature Scheme</title>
+   <author><organization>Decentralized Identity Foundation</organization></author>
+  </front>
+</reference>
+
+<reference anchor="DFINITY" target="https://dfinity.org/pdf-viewer/library/dfinity-consensus.pdf">
+  <front>
+    <title>DFINITY Consensus Algorithm</title>
+   <author><organization>DFINITY</organization></author>
+  </front>
+</reference>
+
+<reference anchor="ETHEREUM" target="https://ethresear.ch/t/pragmatic-signature-aggregation-with-bls/2105">
+  <front>
+    <title>Ethereum Signature Aggregation</title>
+   <author><organization>Ethereum Research</organization></author>
+  </front>
+</reference>
 
 
+<reference anchor="ALGORAND" target="https://medium.com/algorand/digital-signatures-for-blockchains-5820e15fbe95">
+  <front>
+    <title>Efficient and Secure Digital Signatures for Proof-of-Stake Blockchains</title>
+   <author><organization>Algorand</organization></author>
+  </front>
+</reference>
