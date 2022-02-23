@@ -2,16 +2,16 @@
 
 This is the working area for the individual Internet-Draft, "Barreto-Lynn-Scott Elliptic Curve Key Representations for JOSE and COSE".
 
-* [Editor's Copy](https://tplooker.github.io/draft-looker-bls-jose-cose/#go.draft-looker-cose-bls-key-representations.html)
+* [Editor's Copy](https://tplooker.github.io/draft-looker-cose-bls-key-representations/#go.draft-looker-cose-bls-key-representations.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-looker-cose-bls-key-representations)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-looker-cose-bls-key-representations)
-* [Compare Editor's Copy to Individual Draft](https://tplooker.github.io/draft-looker-bls-jose-cose/#go.draft-looker-cose-bls-key-representations.diff)
+* [Compare Editor's Copy to Individual Draft](https://tplooker.github.io/draft-looker-cose-bls-key-representations#go.draft-looker-cose-bls-key-representations.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/tplooker/draft-looker-bls-jose-cose/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/tplooker/draft-looker-cose-bls-key-representations/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
