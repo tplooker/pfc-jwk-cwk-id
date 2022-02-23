@@ -49,6 +49,8 @@ This branch of cryptography has also been used to develop privacy-preserving cry
 
 More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature-04], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
 
+Other relevant work to this draft includes [@JWP] which is extending the JOSE family of specifications to provide support for representing a variety of new proof based cryptographic schemes such as [@BBS] which as referred to above uses the Barreto-Lynn-Scott curves.
+
 There are multiple different pairing-friendly curves in active use; however, this draft focuses on a definition for the Barreto-Lynn-Scott curves due to them being the most "widely used" and "efficient" whilst achieving 128-bit and 256-bit security (BLS12-381 and BLS48-581 respectively).
 
 More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@!id.draft.pairing-friendly-curves-10].
@@ -302,5 +304,14 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   <front>
     <title>Efficient and Secure Digital Signatures for Proof-of-Stake Blockchains</title>
    <author><organization>Algorand</organization></author>
+  </front>
+</reference>
+
+
+<reference anchor="JWP" target="https://json-web-proofs.github.io/json-web-proofs/draft-jmiller-json-proof-algorithms.html#name-bls-curve">
+  <front>
+    <title>JSON Web Proof</title>
+    <author initials='J.' surname='Miller' fullname='Jeremie Miller'/>
+    <author initials='M.' surname='Jones' fullname='Michael B. Jones'/>
   </front>
 </reference>
