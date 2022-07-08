@@ -8,7 +8,7 @@ keyword = ["COSE", "JOSE"]
 
 [seriesInfo]
 name = "Internet-Draft"
-value = "draft-looker-cose-bls-key-representations-latest"
+value = "draft-ietf-cose-bls-key-representations-latest"
 status = "standard"
 
 [pi]
