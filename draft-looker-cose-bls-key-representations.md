@@ -8,7 +8,7 @@ keyword = ["COSE", "JOSE"]
 
 [seriesInfo]
 name = "Internet-Draft"
-value = "draft-looker-cose-bls-key-representations-latest"
+value = "draft-ietf-cose-bls-key-representations-latest"
 status = "standard"
 
 [pi]
@@ -208,7 +208,7 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
 
 -00
 
-* Initial version
+* Created draft-ietf-cose-bls-key-representations-00 from draft-looker-cose-bls-key-representations-00 following working group adoption.
 
 <reference anchor="IANA.COSE.Curves" target="https://www.iana.org/assignments/cose/cose.xhtml#elliptic-curves">
  <front>
