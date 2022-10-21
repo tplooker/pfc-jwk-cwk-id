@@ -200,6 +200,32 @@ E'(GF(p^8))
 
 {backmatter}
 
+# Appendix
+
+## Example JSON Web Key Representations
+
+The following example JWK is for the Bls12381 curve where the public key is in the G1 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G1",
+  "x": "olbufORO-VTYtXkD2k7hXc45KJONpCudrOAeIpOH3Wqu2tJ9MNUNcTze3Eqkr5dp",
+  "d": "_nmYLctt4EA3jtzM_DoO72zOgJtk_7pDqXoFCfpizFE"
+}
+```
+
+The following example JWK is for the Bls12381 curve where the public key is in the G2 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G2",
+  "x": "tTbCV2ztXdPBQOf5ksrhZ3l2KoCBdwDk6x8hih6IWdyD3A_e1p3Yt-Vp8gt1DD8uCQO_0lntjLQ_2PAGpd5Q-ks6UgkedMroobcrt0l9RUq4__GsDzJMSQJ1bQOCC0co",
+  "d": "_nmYLctt4EA3jtzM_DoO72zOgJtk_7pDqXoFCfpizFE"
+}
+```
+
 # Acknowledgments
 
 The authors would like to acknowledge the work of Kyle Den Hartog, which was used as the foundation for this draft.
