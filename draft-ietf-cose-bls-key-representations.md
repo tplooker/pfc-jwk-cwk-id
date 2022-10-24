@@ -204,7 +204,7 @@ E'(GF(p^8))
 
 The following examples showcase JWKs for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
 
-This first example JWK is for the Bls12381 curve where the public key is in the G1 subgroup.
+An example JWK for the Bls12381 curve where the public key is in the G1 subgroup.
 
 ```
 {
