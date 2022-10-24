@@ -258,6 +258,10 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
 
 * Created draft-ietf-cose-bls-key-representations-00 from draft-looker-cose-bls-key-representations-00 following working group adoption.
 
+-01
+
+* Added JWK examples.
+
 <reference anchor="IANA.COSE.Curves" target="https://www.iana.org/assignments/cose/cose.xhtml#elliptic-curves">
  <front>
    <title>COSE Elliptic Curves</title>
