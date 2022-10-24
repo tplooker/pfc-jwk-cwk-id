@@ -207,7 +207,7 @@ The following example JWK is for the Bls12381 curve where the public key is in t
 ```
 {
   "kty": "OKP",
-  "crv": "BLS12381G1",
+  "crv": "Bls12381G1",
   "d": "Mt_OyD9IAsYvobHJ9NCipm6-G7zAu28FCc-saRnXhjQ",
   "x": "iXmOmxttBniHSpyoq-vBr82BexrqG7WDTsxCY4ngUOERVxwpwUT7yKqSKqJeIr7J"
 }
