@@ -213,7 +213,10 @@ An example JWK for the Bls12381 curve where the public key is in the G1 subgroup
   "d": "Mt_OyD9IAsYvobHJ9NCipm6-G7zAu28FCc-saRnXhjQ",
   "x": "iXmOmxttBniHSpyoq-vBr82BexrqG7WDTsxCY4ngUOERVxwpwUT7yKqSKqJeIr7J"
 }
+```
+
 Another example of a different JWK for the Bls12381 curve where the public key is in the G1 subgroup.
+
 ```
 {
   "kty": "OKP",
@@ -223,7 +226,7 @@ Another example of a different JWK for the Bls12381 curve where the public key i
 }
 ```
 
-The following example JWK is for the Bls12381 curve where the public key is in the G2 subgroup.
+An example JWK for the Bls12381 curve where the public key is in the G2 subgroup.
 
 ```
 {
@@ -233,7 +236,9 @@ The following example JWK is for the Bls12381 curve where the public key is in t
   "x": "rvdKcdkxwlj0Y-XZsFpz1hDPJGjnLN27IJipbmaLlaKdYfICGG6dzakG6EkdcvW0AtVV6hXBSKtdFnKQKmmD759tMYYuvKYf5o2cZnROLN5iWQ2H6vp6FlLi71a_AE5I"
 }
 ```
-Another example of a different JWK for the G2 subgroup of the Bls12381 curve is the following.
+
+Another example of a different JWK for the Bls12381 curve where the public key is in the G2 subgroup.
+
 ```
 {
   "kty": "OKP",
