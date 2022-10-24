@@ -214,7 +214,7 @@ An example JWK for the Bls12381 curve where the public key is in the G1 subgroup
   "x": "iXmOmxttBniHSpyoq-vBr82BexrqG7WDTsxCY4ngUOERVxwpwUT7yKqSKqJeIr7J"
 }
 ```
-Another example of a different JWK for the G1 subgroup of the Bls12381 curve is the following.
+Another example of a different JWK for the Bls12381 curve where the public key is in the G1 subgroup.
 ```
 {
   "kty": "OKP",
