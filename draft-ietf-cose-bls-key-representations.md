@@ -200,6 +200,54 @@ E'(GF(p^8))
 
 {backmatter}
 
+# Appendix
+
+The following examples showcase JWKs for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
+
+An example JWK for the Bls12381 curve where the public key is in the G1 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G1",
+  "d": "Mt_OyD9IAsYvobHJ9NCipm6-G7zAu28FCc-saRnXhjQ",
+  "x": "iXmOmxttBniHSpyoq-vBr82BexrqG7WDTsxCY4ngUOERVxwpwUT7yKqSKqJeIr7J"
+}
+```
+
+Another example of a different JWK for the Bls12381 curve where the public key is in the G1 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G1",
+  "d": "PV21Ysd3RNtDBzx94WOkIItSdMkMx0xdjtVFWen9xy8",
+  "x": "jQb7AerHCU1Zf7oUCMYioqAkK_Q35-hDmg9cKhIJzGyZmQgb4saO376vjmGkvaLC"
+}
+```
+
+An example JWK for the Bls12381 curve where the public key is in the G2 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G2",
+  "d": "CUrC9Xp5pEonbFaykalWlbNYYwueJlcuoOexhEhpu0k",
+  "x": "rvdKcdkxwlj0Y-XZsFpz1hDPJGjnLN27IJipbmaLlaKdYfICGG6dzakG6EkdcvW0AtVV6hXBSKtdFnKQKmmD759tMYYuvKYf5o2cZnROLN5iWQ2H6vp6FlLi71a_AE5I"
+}
+```
+
+Another example of a different JWK for the Bls12381 curve where the public key is in the G2 subgroup.
+
+```
+{
+  "kty": "OKP",
+  "crv": "Bls12381G2",
+  "d": "oF2xFR6Iu3aWQARjHFdmNjeZBKuSO6q1DA1t2ucNHyc",
+  "x": "pHufIAzbxDG-oaD0Kb1BcRsDpjw0JX3h6FHRJQpuYSpqQr_sZigCD3UOTrDO2YEvAxiC6GZXZvlwkqSIOVHRWAwRt2loaqAu6jFiL0L0r8LuXhBxX0tvfPX1UhYgcl3_"
+}
+```
+
 # Acknowledgments
 
 The authors would like to acknowledge the work of Kyle Den Hartog, which was used as the foundation for this draft.
