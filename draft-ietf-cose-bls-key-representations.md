@@ -202,6 +202,8 @@ E'(GF(p^8))
 
 # Appendix
 
+## JSON Web Key Examples
+
 The following examples showcase JWKs for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
 
 An example JWK for the Bls12381 curve where the public key is in the G1 subgroup.
@@ -245,6 +247,44 @@ Another example of a different JWK for the Bls12381 curve where the public key i
   "crv": "Bls12381G2",
   "d": "oF2xFR6Iu3aWQARjHFdmNjeZBKuSO6q1DA1t2ucNHyc",
   "x": "pHufIAzbxDG-oaD0Kb1BcRsDpjw0JX3h6FHRJQpuYSpqQr_sZigCD3UOTrDO2YEvAxiC6GZXZvlwkqSIOVHRWAwRt2loaqAu6jFiL0L0r8LuXhBxX0tvfPX1UhYgcl3_"
+}
+```
+
+## COSE_Key Examples
+
+The following examples showcase COSE_Key examples for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
+
+An example COSE_Key for the Bls12381 curve where the public key is in the G1 subgroup expressed as an octet string.
+
+```
+a40101200d215830a256ee7ce44ef954d8b57903da4ee15dce3928938da42b9dace01e229387dd6aaedad27d30d50d713cdedc4aa4af9769235820fe79982dcb6de040378edcccfc3a0eef6cce809b64ffba43a97a0509fa62cc51
+```
+
+The above octet string decoded into CBOR diagnostic view.
+
+```
+{
+  1: 1,
+  -1: 13,
+  -2: h'A256EE7CE44EF954D8B57903DA4EE15DCE3928938DA42B9DACE01E229387DD6AAEDAD27D30D50D713CDEDC4AA4AF9769',
+  -4: h'FE79982DCB6DE040378EDCCCFC3A0EEF6CCE809B64FFBA43A97A0509FA62CC51'
+}
+```
+
+An example COSE_Key for the Bls12381 curve where the public key is in the G2 subgroup expressed as an octet string.
+
+```
+a40101200e2158608936714d127f9089fa45467e337cba9f88290ca50c9d390af3db57a08c4e838640827ef0b5a363779b2088188ed8f9be077c5974d63586ba072ca6b9920c3212b9e76cec18209d91be1088fbae9211f8ceb859154770ed12075db97f963f69fe2358207077a2792b2ce6a16ccbb3e6840a8f04d96afb7f2b028a2858e09387fa1a5070
+```
+
+The above octet string decoded into CBOR diagnostic view.
+
+```
+{
+  1: 1,
+  -1: 14,
+  -2: h'8936714D127F9089FA45467E337CBA9F88290CA50C9D390AF3DB57A08C4E838640827EF0B5A363779B2088188ED8F9BE077C5974D63586BA072CA6B9920C3212B9E76CEC18209D91BE1088FBAE9211F8CEB859154770ED12075DB97F963F69FE',
+  -4: h'7077A2792B2CE6A16CCBB3E6840A8F04D96AFB7F2B028A2858E09387FA1A5070'
 }
 ```
 
