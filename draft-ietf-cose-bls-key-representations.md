@@ -212,8 +212,9 @@ An example JWK for the Bls12381 curve where the public key is in the G1 subgroup
 {
   "kty": "OKP",
   "crv": "Bls12381G1",
-  "d": "Mt_OyD9IAsYvobHJ9NCipm6-G7zAu28FCc-saRnXhjQ",
-  "x": "iXmOmxttBniHSpyoq-vBr82BexrqG7WDTsxCY4ngUOERVxwpwUT7yKqSKqJeIr7J"
+  "x": "AenUwnEOYNZVj3r-Se74mYAHOKYjZpGRyY4AfHPTVErq9oLORZUO8TyusmI2urBB",
+  "y": "B7E90HoyxdrEeOwbmMbZTKKnX-9y_C-ysf5UY9sA_GfotS-feEsG9YAIIQE_8T2X",
+  "d": "afUKrrA56cJoCJ8aW4Xzxzawcup5wsfqM9oFYj40gOI"
 }
 ```
 
@@ -223,30 +224,9 @@ Another example of a different JWK for the Bls12381 curve where the public key i
 {
   "kty": "OKP",
   "crv": "Bls12381G1",
-  "d": "PV21Ysd3RNtDBzx94WOkIItSdMkMx0xdjtVFWen9xy8",
-  "x": "jQb7AerHCU1Zf7oUCMYioqAkK_Q35-hDmg9cKhIJzGyZmQgb4saO376vjmGkvaLC"
-}
-```
-
-An example JWK for the Bls12381 curve where the public key is in the G2 subgroup.
-
-```
-{
-  "kty": "OKP",
-  "crv": "Bls12381G2",
-  "d": "CUrC9Xp5pEonbFaykalWlbNYYwueJlcuoOexhEhpu0k",
-  "x": "rvdKcdkxwlj0Y-XZsFpz1hDPJGjnLN27IJipbmaLlaKdYfICGG6dzakG6EkdcvW0AtVV6hXBSKtdFnKQKmmD759tMYYuvKYf5o2cZnROLN5iWQ2H6vp6FlLi71a_AE5I"
-}
-```
-
-Another example of a different JWK for the Bls12381 curve where the public key is in the G2 subgroup.
-
-```
-{
-  "kty": "OKP",
-  "crv": "Bls12381G2",
-  "d": "oF2xFR6Iu3aWQARjHFdmNjeZBKuSO6q1DA1t2ucNHyc",
-  "x": "pHufIAzbxDG-oaD0Kb1BcRsDpjw0JX3h6FHRJQpuYSpqQr_sZigCD3UOTrDO2YEvAxiC6GZXZvlwkqSIOVHRWAwRt2loaqAu6jFiL0L0r8LuXhBxX0tvfPX1UhYgcl3_"
+  "x": "CycImbdwxMGYpsqTliCvQ9gj3lruElTDSYbzh2g4VHhlJENpi7sUM-b-9IW_e5oY",
+  "y": "GGbi2FLZzp1tAvnivmlxFHJ3GNplhVwzt6xigKMsEhjRMyQm3fjz5hdKSBhGctq-",
+  "d": "UNr7ub9UVbSbLqWfIz0iA7SmTB9McY1MJ7nPElbZ9yA"
 }
 ```
 
@@ -260,8 +240,9 @@ An example JWK for the Bls48581 curve where the public key is in the G1 subgroup
 {
   "kty": "OKP",
   "crv": "Bls48581G1",
-  "x": "AwwXxiUemAF5ZYORdFabm87Y-8mzSW8jB1HZ-0BvXi87VHlTJbUs7yFEZlYNxcaP2uUnfgBhR7GUgKK_uiW_yQ2v5EeNuitTKcE",
-  "d": "IbTrWWx6KkM1ggh-53OMB8Q8Bv3jXRJ3mGf0-v4YcrrGCf6joOTKRUujsccKUqHckiITeqWmGmdGgKJ3luPmFTh0i95oV2Cktw"
+  "x": "AkmYVmiSAJkM1Mnwn4kFtwRQSHWXV71Sks4ARgJ8OjKxKFlKIdg738P5txciizAi7RyoZRbQdshCac4WAVcopGttFDZQ882qrQ",
+  "y": "DDhnx0yoSIddnUNYyQqAoS_tZXguc4t8UjhFCBD3AR-wyMkIRmTVIs-_WTyQ3Lkul0nuLoMGbVYimIlJLKAlQBQqURD4bpW7eA",
+  "d": "s76mQwCbnW-4rGoVU-39-jacXHD4zw1Wlfi9y-Lq0xHnYQC6eSt3lN9wYfrkZRw6ZA0wTRMxSilerAlqUG-Sk0Y9HyoLFjvSHg"
 }
 ```
 
@@ -271,30 +252,9 @@ Another example of a different JWK for the Bls48581 curve where the public key i
 {
   "kty": "OKP",
   "crv": "Bls48581G1",
-  "x": "Agty3i2IqJ3VJ7VqH72UWh7QqsfewMY7fQ85MMTzs88HOiw4aapY3g7ZTX3n6cjujjrYVrIOwYOFjqpXCAb9gXHq6I7HfZfmZJ8",
-  "d": "DCQ0wva5hqgEIRtlM5hYRGeF8Vmna5KzfAU6V3cek2LPLDEstYEOqA6oG1N5sphsutViyVLfTsFSw81nzlJeZY8PHnyWPMl7xw"
-}
-```
-
-An example JWK for the Bls48581 curve where the public key is in the G2 subgroup.
-
-```
-{
-  "kty": "OKP",
-  "crv": "Bls48581G2",
-  "x": "AgtldXunqaVhEKx37rZJz81ZBTdR9l4Qi3B9rFPwCiRulIBbkAYNDilhGn5dSc_CP3vU6CfftbpMbt-Of1Wbclce92hxX3f-Ay4KMbzeAP4eC0hAgnd3vz1M_zsSNIYy8G8I2CH8eXeCswshKe6uR6DZtEmhSfv4Qnm7my0mOqAa9EJN5CkYc3w02H2Gul-C8kf1AX9H-626ukmxxJbkPaxszYDPFMFYLdP7O73lP3amhy8cZkVsVRQw4j-VDq484jNZoNIOlleBJlSuCQHl8-XpPTsFA6PP4H55nwTHpoGv-149SuhUI_AWcqdymTZOBt4Orp1urXKxp4k3X7lkknwQciMd6693h6Io_zP0duYZq94cKl9USGzo2vVQb_AL_qxJOJ8G-DisKL0cwrJY2AE69K2rXttOvxOxwbHUDdzoFsL8xGivaPba5ESnAnz1PGYn_cfTHq_slSWjfmf26IjcOx_fvapQjjECl9RVBZIEYAnqaly4hcP4uUydfo0qh_2wuTksYtvf_YxnaEFsk_OFakErKFGAAVyDXVTrrftBWnDz4h80tIc0ojXeuoorYqND723WGglvEbolDSBzd_n4EPArc77_Xmf_alfEhOyNIOZc1UPHSU3s0oQy726hwPvhZ4vde3bHmhCYoM6faUK8enhlIGHGQHgCwuEm0wgSConl_GXzoqEfQ2RY40qbhxKEsieofufzRq6Y-t-XEMnoL0p_F69PRshrj4I82Nki8MJki67D96nFyts-xrOYdojTceBFY53a",
-  "d": "y77j03LMX1yONnhZb8FqMmiMH37nPoaeGSOkznov9OWFnT6HTfXvnmN38GgimttuZwMcVrHOmYFfNx5aHGTsNXB0n0IaYtxseg"
-}
-```
-
-Another example of a different JWK for the Bls48581 curve where the public key is in the G2 subgroup.
-
-```
-{
-  "kty": "OKP",
-  "crv": "Bls48581G2",
-  "x": "Ag02BS_ZUYHI5JfSh8S5EEEGS80jZoiE5ZDiuybYeFyWGbva0ulI5D8Fm4-2fGmg6Foa_GSsjg5YLQ-SbXMl7XSmYYpTpk_Cm00ECW3b08w7k1Dj6_LUxMNo8zkBAabRyhFZ29nCj0X26mKfTBYFji4S_WiO68L9cPnxymT0SmzCGQaIrtPB53qFuOauE0kjiaAIB8YDYaGGobV2EsWzfgwiD-lYcG9lFvzh_7wvjF2RAPJzrWlKATQgjRDuKtPtBkqRcwAzqeOG65UknSfnaneKIOGGblkaQoRRJgcaGdpCQYt4qTyc-02Xbco4cDKQpUoKrxyJfJ8upRx-f3ssZvF5qAzWpSfEPy1eH5lEIz4l068PKFJZV9QlfwyF8NfNb0vPdJoNJSsv6VrcWFyYRWfjYKSb92kwEdFhh5yZVEGAdEAa6heVmSIlG611snjkzxm6nPqtVB2corbdD7F_olloABr0dBSUzCD9oXXIC8K5ySym3Iy1zI7w-K4xDrjP9S1bJTLJNWw0N6XEWwhOWY8dfHT4wud8KySoNBddJIc3Db6iIfSPHjy83vKqGZKXDAEVq0KWIwDg_PVWAwq5V-FvpMyqdNkCqJ_tvD6qIA1kXfaoGWv5sYSw4BUldoBIjnZHPS1wuoxfvPhNs4PUVvqx7XimMW9k3Z7kNVKgFM0KDFb4X9CGiDDGqKlGTaN3b7E8-dbLWL28EzgaNHrsmhqLZio0HwNH0cr0T_PCzuJdy3P8aO64DN-urtM3AiiMwwNfFGOp6zv3",
-  "d": "qi9yplLdXM4w4XPSKBaCo7NTixFNE6jBGIY2o3usx9b-kixoVjzXZUcWB2QX3lD0TOub3L3N5eWF2v_5UsQuBKzteVWcVcwThA"
+  "x": "B5L-3_dDeqCpVj_dXjsCcD48VzWFfOpciuzvUgD4IfgwlntI1OPp1_xbXMkLWdecodEzI2SoTMNU8C_LkELDWJjlnUZBUBAttA",
+  "y": "CJpH-wqGNPsjWw5yLPLlDQbkh7GToHtA0afsub9QTEvV_5xXV1vtBkzkVJ-rwUaGQwZTaX9UgO04Klxz8goFxPKKeJLmXPFPJA",
+  "d": "VoDqj2s37PzHSnhPlJUypadLHCUsb64hLBdNWUXqhqBLmq7BknK5RlCD67nC8weAla5Ixh07Ar_u5amyVDQX-d1m2x3G7V-AYA"
 }
 ```
 
