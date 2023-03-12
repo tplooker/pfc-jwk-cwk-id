@@ -69,7 +69,8 @@ When expressing a cryptographic key for these curves in JSON Web Key (JWK) form,
 
 - The parameter "kty" MUST be present and set to "OKP".
 - The parameter "crv" MUST be present and value MUST be one defined in (#curve-parameter-registration).
-- The parameter "x" MUST be present whose value represents the curve point for the public key. This value MUST be encoded using the serialization defined in [@!id.draft.pairing-friendly-curves-10] Appendix C and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
+- The parameter "x" MUST be present whose value represents the x coordinate of the curve point for the public key. This value MUST be encoded using the serialization defined in Section 2.3.5 of [@SEC1] and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
+- The parameter "y" MUST be present whose value represents the y coordinate of the curve point for the public key. This value MUST be encoded using the serialization defined in Section 2.3.5 of [@SEC1] and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
 - The parameter "d" MUST be present for private key representations whose value MUST contain the little-endian representation of the private key base64url encoded without padding as defined in [@!RFC7515] Appendix C. This parameter MUST NOT be present for public keys.
 
 ### COSE_Key Representation
@@ -488,5 +489,12 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
     <title>JSON Web Proof</title>
     <author initials='J.' surname='Miller' fullname='Jeremie Miller'/>
     <author initials='M.' surname='Jones' fullname='Michael B. Jones'/>
+  </front>
+</reference>
+
+<reference anchor="SEC1" target="http://www.secg.org/sec1-v2.pdf">
+  <front>
+    <title>SEC 1: Elliptic Curve Cryptography</title>
+    <author><organization>Standards for Efficient Cryptography Group</organization></author>
   </front>
 </reference>
