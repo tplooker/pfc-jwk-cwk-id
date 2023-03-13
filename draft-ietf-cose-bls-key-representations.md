@@ -316,7 +316,7 @@ Another example of a different JWK for the Bls48581 curve where the public key i
 
 ## Bls12381 Key Pairs
 
-The following showcase COSE_key examples for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
+The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
 
 An example COSE_Key for the Bls12381 curve where the public key is in the G1 subgroup expressed as an octet string.
 
