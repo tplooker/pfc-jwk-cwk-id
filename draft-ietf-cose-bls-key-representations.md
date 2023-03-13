@@ -388,11 +388,11 @@ Below is the above CBOR rendered in diagnostic view.
   -3: h'0D10BAE49BF4F049150688C992B6945449315618B18184B985D7D17D86566A2B13E0CFCD6283856453F8FF9260D39FE9064D01646DD18A36D397D62ACEE019647BB18F878DC4A045E130FFE8A771982C6002B8B4071E3AC6D70CAAA2A0A9499D', 
   -4: h'D637A8D2EBAB66F6880BCD9850C34B3876A57EF85A6DB307B4B795688D2D361B'
 }
-``
+```
 
 ## Bls48581 Key Pairs
 
-The following showcase COSE_key examples for both the G1 and G2 subgroups of the Bls48581 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
+The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the Bls48581 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
 
 An example COSE_Key for the Bls48581 curve where the public key is in the G1 subgroup expressed as an octet string.
 
