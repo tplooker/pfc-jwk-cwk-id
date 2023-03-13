@@ -719,6 +719,10 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
 
 * Added JWK examples.
 
+-02
+
+* Update COSE_Key and JWK examples.
+
 <reference anchor="IANA.COSE.Curves" target="https://www.iana.org/assignments/cose/cose.xhtml#elliptic-curves">
  <front>
    <title>COSE Elliptic Curves</title>
