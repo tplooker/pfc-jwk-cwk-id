@@ -26,9 +26,9 @@ organization = "Mattr"
 initials = "M."
 surname = "Jones"
 fullname = "Michael B. Jones"
-organization = "Microsoft"
+organization = "Self-Issued Consulting"
   [author.address]
-  email = "mbj@microsoft.com"
+  email = "michael_b_jones@hotmail.com"
   uri = "https://self-issued.info/"
 
 %%%
@@ -47,13 +47,13 @@ There are a variety of applications for pairing based cryptography including sch
 
 This branch of cryptography has also been used to develop privacy-preserving cryptographic hardware attestations schemes, including the Elliptic Curve Direct Anonymous Attestation (ECDAA) in the Trusted Platform Modules [@TPM] specified by the Trusted Computing Group. Further work on similar schemes has also occurred at the FIDO Alliance [@ECDAA]. Similarly, Intel released [@EPID] which provides a solution to remote hardware attestation for Intel Software Guard Extension (SGX) enabled environments.
 
-More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature-04], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
+More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
 
 Other relevant work to this draft includes [@JWP] which is extending the JOSE family of specifications to provide support for representing a variety of new proof based cryptographic schemes such as [@BBS] which as referred to above uses the Barreto-Lynn-Scott curves.
 
 There are multiple different pairing-friendly curves in active use; however, this draft focuses on a definition for the Barreto-Lynn-Scott curves due to them being the most "widely used" and "efficient" whilst achieving 128-bit and 256-bit security (BLS12-381 and BLS48-581 respectively).
 
-More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@!id.draft.pairing-friendly-curves-10].
+More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@!id.draft.pairing-friendly-curves].
 
 # Conventions and Definitions
 
@@ -98,7 +98,7 @@ Bls48581G2      | TBD (16 requested)                   | A cryptographic key on 
 
 # Security Considerations
 
-See [@!id.draft.pairing-friendly-curves-10] for additional details on security considerations for the curves used.  Implementers should also consider the general guidance provided in Section 9 of [@!RFC7517] and Section 17 of [@!RFC8152] when using this specification.
+See [@!id.draft.pairing-friendly-curves] for additional details on security considerations for the curves used.  Implementers should also consider the general guidance provided in Section 9 of [@!RFC7517] and Section 17 of [@!RFC8152] when using this specification.
 
 Furthermore, because this specification only defines the cryptographic key representations and not the usage of these keys with specific algorithms, implementers should be aware to follow any guidance that may be provided around appropriate usage of the keys and or additional steps that may be required to validate the keys within the context of particular algorithms.
 
@@ -711,17 +711,21 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
 
 # Document History
 
--00
+-03
 
-* Created draft-ietf-cose-bls-key-representations-00 from draft-looker-cose-bls-key-representations-00 following working group adoption.
+* Updated references.
+
+-02
+
+* Update COSE_Key and JWK examples.
 
 -01
 
 * Added JWK examples.
 
--02
+-00
 
-* Update COSE_Key and JWK examples.
+* Created draft-ietf-cose-bls-key-representations-00 from draft-looker-cose-bls-key-representations-00 following working group adoption.
 
 <reference anchor="IANA.COSE.Curves" target="https://www.iana.org/assignments/cose/cose.xhtml#elliptic-curves">
  <front>
@@ -737,17 +741,19 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
  </front>
 </reference>
 
-<reference anchor="id.draft.pairing-friendly-curves-10" target="https://www.ietf.org/archive/id/draft-irtf-cfrg-pairing-friendly-curves-10.html">
+<reference anchor="id.draft.pairing-friendly-curves" target="https://www.ietf.org/archive/id/draft-irtf-cfrg-pairing-friendly-curves-11.html">
  <front>
    <title>Pairing-Friendly Curves</title>
    <author><organization>IETF CFRG</organization></author>
+   <date day="10" month="May" year="2023"/>
  </front>
 </reference>
 
-<reference anchor="id.draft.bls-signature-04" target="https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-bls-signature-04">
+<reference anchor="id.draft.bls-signature" target="https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-bls-signature-05">
  <front>
-   <title>BLS Signature</title>
+   <title>BLS Signatures</title>
    <author><organization>IETF CFRG</organization></author>
+   <date day="16" month="June" year="2022"/>
  </front>
 </reference>
 
@@ -758,7 +764,7 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
  </front>
 </reference>
 
-<reference anchor="BLS">
+<reference anchor="BLS" target="https://link.springer.com/chapter/10.1007/3-540-36413-7_19">
   <front>
     <title>Constructing Elliptic Curves with Prescribed Embedding Degrees</title>
     <seriesInfo name="DOI" value="10.1007/3-540-36413-7_19"/>
@@ -791,16 +797,17 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   </front>
 </reference>
 
-<reference anchor="BBS" target="https://identity.foundation/bbs-signature/draft-bbs-signatures.html">
+<reference anchor="BBS" target="https://identity.foundation/bbs-signature/draft-irtf-cfrg-bbs-signatures.html">
   <front>
     <title>The BBS Signature Scheme</title>
    <author><organization>Decentralized Identity Foundation</organization></author>
+    <date day="26" month="September" year="2023"/>
   </front>
 </reference>
 
 <reference anchor="DFINITY" target="https://dfinity.org/pdf-viewer/library/dfinity-consensus.pdf">
   <front>
-    <title>DFINITY Consensus Algorithm</title>
+    <title>DFINITY Consensus System</title>
    <author><organization>DFINITY</organization></author>
   </front>
 </reference>
@@ -817,15 +824,18 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   <front>
     <title>Efficient and Secure Digital Signatures for Proof-of-Stake Blockchains</title>
    <author><organization>Algorand</organization></author>
+    <date month="March" day="7" year="2019"/>
   </front>
 </reference>
 
 
-<reference anchor="JWP" target="https://json-web-proofs.github.io/json-web-proofs/draft-jmiller-json-proof-algorithms.html#name-bls-curve">
+<reference anchor="JWP" target="https://www.ietf.org/archive/id/draft-ietf-jose-json-web-proof-02.html">
   <front>
     <title>JSON Web Proof</title>
     <author initials='J.' surname='Miller' fullname='Jeremie Miller'/>
+    <author initials='D.' surname='Waite' fullname='David Waite'/>
     <author initials='M.' surname='Jones' fullname='Michael B. Jones'/>
+    <date day="21" month="October" year="2023"/>
   </front>
 </reference>
 
@@ -833,5 +843,6 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   <front>
     <title>SEC 1: Elliptic Curve Cryptography</title>
     <author><organization>Standards for Efficient Cryptography Group</organization></author>
+    <date month="May" day="21" year="2009"/>
   </front>
 </reference>
