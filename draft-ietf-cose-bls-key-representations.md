@@ -71,7 +71,7 @@ The following definitions apply to the pairing-friendly elliptic curves known as
 
 When expressing a cryptographic key for these curves in JSON Web Key (JWK) form, the following rules apply:
 
-- The parameter "kty" MUST be present and set to "OKP".
+- The parameter "kty" MUST be present and set to "EC".
 - The parameter "crv" MUST be present and value MUST be one defined in (#curve-parameter-registration).
 - The parameter "x" MUST be present whose value represents the x coordinate of the curve point for the public key. This value MUST be encoded using the procedure defined in [Section 2.1](#point-coordinates-encoding) and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
 - The parameter "y" MUST be present whose value represents the y coordinate of the curve point for the public key. This value MUST be encoded using the procedure defined in [Section 2.1](#point-coordinates-encoding) and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
@@ -81,7 +81,7 @@ When expressing a cryptographic key for these curves in JSON Web Key (JWK) form,
 
 When expressing a cryptographic key for these curves in COSE_Key form, the following rules apply:
 
-- The parameter "kty" (1) MUST be present and set to "OKP" (1).
+- The parameter "kty" (1) MUST be present and set to "EC2" (2).
 - The parameter "crv" (-1) MUST be present and value MUST be one defined in (#curve-parameter-registration).
 - The parameter "x" (-2) MUST be present whose value represents the x coordinate of the curve point for the public key. This value MUST be encoded using the procedure defined in [Section 2.1](#point-coordinates-encoding) and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
 - The parameter "y" (-3) Must be present whose value represents the y coordinate of the curve point for the public key. This value MUST be encoded using the procedure defined in [Section 2.1](#point-coordinates-encoding) and MUST be base64url encoded without padding as defined in [@!RFC7515] Appendix C.
@@ -156,7 +156,7 @@ Bls12381G1
 
 - Curve Name: Bls12381G1
 - Value: TBD (13 requested)
-- Key Type: OKP
+- Key Type: EC2
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E(GF(p))
@@ -169,7 +169,7 @@ Bls12381G2
 
 - Curve Name: Bls12381G2
 - Value: TBD (14 requested)
-- Key Type: OKP
+- Key Type: EC2
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E'(GF(p^2))
@@ -182,7 +182,7 @@ Bls48581G1
 
 - Curve Name: Bls48581G1
 - Value: TBD (15 requested)
-- Key Type: OKP
+- Key Type: EC2
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E(GF(p))
@@ -195,7 +195,7 @@ Bls48581G2
 
 - Curve Name: Bls48581G2
 - Value: TBD (16 requested)
-- Key Type: OKP
+- Key Type: EC2
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E'(GF(p^8))
@@ -216,7 +216,7 @@ An example JWK for the Bls12381 curve where the public key is in the G1 subgroup
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls12381G1",
   "x": "Ed4GBGLVasEp4ejPz44CvllbTldfLLcm2QcIJluBL6p_SQmRrZvJNa3YaJ-Wx8Im",
   "y": "AbdYAsAb20CHzlVW6VBO9i16BcGOmcYiMLlBEh9DfAiDu_1ZIAd1zewSi9f6517g",
@@ -228,7 +228,7 @@ Another example of a different JWK for the Bls12381 curve where the public key i
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls12381G1",
   "x": "EUGQExpzxebwmXEeqc39OI3J1NfUCMVQPqc_Lb-4dLu0xCaSrd0rDBMTFthd5r-2",
   "y": "FNpXfp4a-5N7Cb528pwRhLINOmwyuhjKjPz8jcaxgCSNZCbjaYQsGoOhftRqWKpg",
@@ -240,7 +240,7 @@ An example JWK for the Bls12381 curve where the public key is in the G2 subgroup
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls12381G2",
   "x": "Ajs8lstTgoTgXMF6QXdyh3m8k2ixxURGYLMaYylVK_x0F8HhE8zk0YWiGV3CHwpQ
 Ea2sH4PBZLaYCn8se-1clmCORDsKxbbw3Js_Alu4OmkV9gmbJsy1YF2rt7Vxzs6S",
@@ -254,7 +254,7 @@ Another example of a different JWK for the Bls12381 curve where the public key i
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls12381G2",
   "x": "Atx1GqJH4rXlpTk0wg9LA6SsHrWWdPPqL2BXLd7zzMpFLeLdr-QQMJ2NPebFkw-h
 CyWIj8dwP9uvuu9c9WZrVWvQnY2n7xQHF-BM-Mx6747t_ZJCu809fskA3ca3TVr7",
@@ -272,7 +272,7 @@ An example JWK for the Bls48581 curve where the public key is in the G1 subgroup
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls48581G1",
   "x": "BZo5kuiunkAUaE9n-c8L12pjTfV35ZTzei0eYIzYEM05Y--PCABHPXt20ImhyL9K
 sdrUqYxe5KrsbsahKYdN9dXa6a7fsFnWxw",
@@ -287,7 +287,7 @@ Another example of a different JWK for the Bls48581 curve where the public key i
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls48581G1",
   "x": "BjRT7VST4vMlTj6yMF73QlEg5XSHYQflAJMPf-4BhjO9qL8A6Rqo1OsdiGTrC3jY
 S3mLOHp-zg-yDmK_7HD8RR4S9j2Tf84blA",
@@ -302,7 +302,7 @@ An example JWK for the Bls48581 curve where the public key is in the G2 subgroup
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls48581G2",
   "x": "ANAdJhZscIOfuf06ScGr1EwKcy7IFnq4bKPRl_QpBhRtx7Hg4hvpCXXbt03L1UGv
 oZbf-pxVfOyQMaA1qsGAHU0R6OYgUIpc-wE3KKZFLtzfS3vKPVLSLNTm7USw7audlChzhn8g
@@ -335,7 +335,7 @@ Another example of a different JWK for the Bls48581 curve where the public key i
 
 ```
 {
-  "kty": "OKP",
+  "kty": "EC",
   "crv": "Bls48581G2",
   "x": "BgaTERiH8qDLfouNR44GOkiE2EOCgCbLxWEI3ocyXPLxeEtCCVUtnj3sQv-I3nM3
 V6IptFAoEJkLpCmMLBwyMTZ3B69p61yYBAU-fO2XyUiR0aEmWgqI-tesctbExIleiWWi221n
@@ -708,8 +708,15 @@ E108AD42AAF700B98B6C0C42E6873B22255C4EA6607925D803B76222E826A2033C643FE2
 # Acknowledgments
 
 The authors would like to acknowledge the work of Kyle Den Hartog, which was used as the foundation for this draft.
+We would also like to thank
+David Waite
+for his contributions to the specification.
 
 # Document History
+
+-04
+
+* Changed the key type from OKP to EC/EC2 since these keys use "x" and "y" values.
 
 -03
 
@@ -797,11 +804,11 @@ The authors would like to acknowledge the work of Kyle Den Hartog, which was use
   </front>
 </reference>
 
-<reference anchor="BBS" target="https://identity.foundation/bbs-signature/draft-irtf-cfrg-bbs-signatures.html">
+<reference anchor="BBS" target="https://www.ietf.org/archive/id/draft-irtf-cfrg-bbs-signatures-05.html">
   <front>
     <title>The BBS Signature Scheme</title>
-   <author><organization>Decentralized Identity Foundation</organization></author>
-    <date day="26" month="September" year="2023"/>
+   <author><organization>IETF CFRG</organization></author>
+    <date day="21" month="December" year="2023"/>
   </front>
 </reference>
 
