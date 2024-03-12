@@ -91,10 +91,10 @@ When expressing a cryptographic key for these curves in COSE_Key form, the follo
 
 JWK "crv" value | COSE_Key "crv" value | Description         |
 ----------------|----------------------|---------------------|
-Bls12381G1      | TBD (13 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G1 defined as `E(GF(p))` of order r. The private key will be 32 bytes long. Each of the x and y coordinates of the public key will be 48 bytes long.
-Bls12381G2      | TBD (14 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G2 defined as `E(GF(p^2))` of order r. The private key will be 32 bytes long. Each of the x and y coordinates of the public key will be 96 bytes long.
-Bls48581G1      | TBD (15 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G1 defined as `E(GF(p))` of order r. The private key will be 65 bytes long. Each of the x and y coordinates of the public key will be 73 bytes long.
-Bls48581G2      | TBD (16 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G2 defined as `E(GF(p^8))` of order r. The private key will be 65 bytes long. Each of the x and y coordinates of the public key will be 584 bytes long.
+BLS12381G1      | TBD (13 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G1 defined as `E(GF(p))` of order r. The private key will be 32 bytes long. Each of the x and y coordinates of the public key will be 48 bytes long.
+BLS12381G2      | TBD (14 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 12 with 381-bit p in the subgroup of G2 defined as `E(GF(p^2))` of order r. The private key will be 32 bytes long. Each of the x and y coordinates of the public key will be 96 bytes long.
+BLS48581G1      | TBD (15 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G1 defined as `E(GF(p))` of order r. The private key will be 65 bytes long. Each of the x and y coordinates of the public key will be 73 bytes long.
+BLS48581G2      | TBD (16 requested)                   | A cryptographic key on the Barreto-Lynn-Scott (BLS) curve featuring an embedding degree 48 with 581-bit p in the subgroup of G2 defined as `E(GF(p^8))` of order r. The private key will be 65 bytes long. Each of the x and y coordinates of the public key will be 584 bytes long.
 
 # Security Considerations
 
@@ -108,9 +108,9 @@ Furthermore, because this specification only defines the cryptographic key repre
 
 This section registers the following values in the IANA "JSON Web Key Elliptic Curve" registry [@!IANA.JOSE.Curves].
 
-Bls12381G1
+BLS12381G1
 
-- Curve Name: Bls12381G1
+- Curve Name: BLS12381G1
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E(GF(p))
@@ -118,9 +118,9 @@ E(GF(p))
 - Change Controller: IESG
 - Specification Document(s): (#json-web-key-representation)
 
-Bls12381G2
+BLS12381G2
 
-- Curve Name: Bls12381G2
+- Curve Name: BLS12381G2
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E'(GF(p^2))
@@ -128,9 +128,9 @@ E'(GF(p^2))
 - Change Controller: IESG
 - Specification Document(s): (#json-web-key-representation)
 
-Bls48581G1
+BLS48581G1
 
-- Curve Name: Bls48581G1
+- Curve Name: BLS48581G1
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E(GF(p))
@@ -138,9 +138,9 @@ E(GF(p))
 - Change Controller: IESG
 - Specification Document(s): (#json-web-key-representation)
 
-Bls48581G2
+BLS48581G2
 
-- Curve Name: Bls48581G2
+- Curve Name: BLS48581G2
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
 Lynn-Scott pairing-friendly curve using the r-order subgroup of
 E'(GF(p^8))
@@ -152,9 +152,9 @@ E'(GF(p^8))
 
 This section registers the following value in the IANA "COSE Elliptic Curves" registry [@!IANA.COSE.Curves].
 
-Bls12381G1
+BLS12381G1
 
-- Curve Name: Bls12381G1
+- Curve Name: BLS12381G1
 - Value: TBD (13 requested)
 - Key Type: EC2
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
@@ -165,9 +165,9 @@ E(GF(p))
 - Specification Document(s): (#cose-key-representation)
 - Recommended: Yes
 
-Bls12381G2
+BLS12381G2
 
-- Curve Name: Bls12381G2
+- Curve Name: BLS12381G2
 - Value: TBD (14 requested)
 - Key Type: EC2
 - Curve Description: 381 bit with an embedding degree of 12 Barreto-
@@ -178,9 +178,9 @@ E'(GF(p^2))
 - Specification Document(s): (#cose-key-representation)
 - Recommended: Yes
 
-Bls48581G1
+BLS48581G1
 
-- Curve Name: Bls48581G1
+- Curve Name: BLS48581G1
 - Value: TBD (15 requested)
 - Key Type: EC2
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
@@ -191,9 +191,9 @@ E(GF(p))
 - Specification Document(s): (#cose-key-representation)
 - Recommended: Yes
 
-Bls48581G2
+BLS48581G2
 
-- Curve Name: Bls48581G2
+- Curve Name: BLS48581G2
 - Value: TBD (16 requested)
 - Key Type: EC2
 - Curve Description: 581 bit with an embedding degree of 48 Barreto-
@@ -208,40 +208,40 @@ E'(GF(p^8))
 
 # JSON Web Key Examples
 
-## Bls12381 Key Pairs
+## BLS12381 Key Pairs
 
-The following examples showcase JWKs for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
+The following examples showcase JWKs for both the G1 and G2 subgroups of the BLS12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
 
-An example JWK for the Bls12381 curve where the public key is in the G1 subgroup.
+An example JWK for the BLS12381 curve where the public key is in the G1 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls12381G1",
+  "crv": "BLS12381G1",
   "x": "Ed4GBGLVasEp4ejPz44CvllbTldfLLcm2QcIJluBL6p_SQmRrZvJNa3YaJ-Wx8Im",
   "y": "AbdYAsAb20CHzlVW6VBO9i16BcGOmcYiMLlBEh9DfAiDu_1ZIAd1zewSi9f6517g",
   "d": "3nc6_s38FVVlawbwmPFOjB4TlAPy_K2Tx39I7XnEnDc"
 }
 ```
 
-Another example of a different JWK for the Bls12381 curve where the public key is in the G1 subgroup.
+Another example of a different JWK for the BLS12381 curve where the public key is in the G1 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls12381G1",
+  "crv": "BLS12381G1",
   "x": "EUGQExpzxebwmXEeqc39OI3J1NfUCMVQPqc_Lb-4dLu0xCaSrd0rDBMTFthd5r-2",
   "y": "FNpXfp4a-5N7Cb528pwRhLINOmwyuhjKjPz8jcaxgCSNZCbjaYQsGoOhftRqWKpg",
   "d": "OdNBrRDu89IrnlY5Hl-2CW-3cqW0Rw7IgQUuwLZ8gV4"
 }
 ```
 
-An example JWK for the Bls12381 curve where the public key is in the G2 subgroup.
+An example JWK for the BLS12381 curve where the public key is in the G2 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls12381G2",
+  "crv": "BLS12381G2",
   "x": "Ajs8lstTgoTgXMF6QXdyh3m8k2ixxURGYLMaYylVK_x0F8HhE8zk0YWiGV3CHwpQ
 Ea2sH4PBZLaYCn8se-1clmCORDsKxbbw3Js_Alu4OmkV9gmbJsy1YF2rt7Vxzs6S",
   "y": "BVkkrVEib-P_FMPHNtqxJymP3pV-H8fCdvPkoWInpFfM9tViyqD8JAmwDf64zU2h
@@ -250,12 +250,12 @@ BV_vvCQ632ScAooEExXuz1IeQH9D2o-uY_dAjZ37YHuRMEyzh8Tq-90JHQvicOqx",
 }
 ```
 
-Another example of a different JWK for the Bls12381 curve where the public key is in the G2 subgroup.
+Another example of a different JWK for the BLS12381 curve where the public key is in the G2 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls12381G2",
+  "crv": "BLS12381G2",
   "x": "Atx1GqJH4rXlpTk0wg9LA6SsHrWWdPPqL2BXLd7zzMpFLeLdr-QQMJ2NPebFkw-h
 CyWIj8dwP9uvuu9c9WZrVWvQnY2n7xQHF-BM-Mx6747t_ZJCu809fskA3ca3TVr7",
   "y": "Bk0BZG3RijbTl9YqzuAZZHuxj4eNxKBF4TD_6KdxmCxgAri0Bx46xtcMqqKgqUmd
@@ -264,16 +264,16 @@ DRC65Jv08EkVBojJkraUVEkxVhixgYS5hdfRfYZWaisT4M_NYoOFZFP4_5Jg05_p",
 }
 ```
 
-## Bls48581 Key Pairs
+## BLS48581 Key Pairs
 
-The following examples showcase JWKs for both the G1 and G2 subgroups of the Bls48581 curve. As before, note that the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
+The following examples showcase JWKs for both the G1 and G2 subgroups of the BLS48581 curve. As before, note that the examples also include the corresponding private key, expressed through the inclusion of the “d” parameter.
 
-An example JWK for the Bls48581 curve where the public key is in the G1 subgroup.
+An example JWK for the BLS48581 curve where the public key is in the G1 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls48581G1",
+  "crv": "BLS48581G1",
   "x": "BZo5kuiunkAUaE9n-c8L12pjTfV35ZTzei0eYIzYEM05Y--PCABHPXt20ImhyL9K
 sdrUqYxe5KrsbsahKYdN9dXa6a7fsFnWxw",
   "y": "EJfIRJ62OJ1vnLuwtziSgC4syIDVgiYoGxqLhdryqJEGepP7-4iePB5nrAthL6gl
@@ -283,12 +283,12 @@ LWEWNbq--FlOVKL_EBlbL9I"
 }
 ```
 
-Another example of a different JWK for the Bls48581 curve where the public key is in the G1 subgroup.
+Another example of a different JWK for the BLS48581 curve where the public key is in the G1 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls48581G1",
+  "crv": "BLS48581G1",
   "x": "BjRT7VST4vMlTj6yMF73QlEg5XSHYQflAJMPf-4BhjO9qL8A6Rqo1OsdiGTrC3jY
 S3mLOHp-zg-yDmK_7HD8RR4S9j2Tf84blA",
   "y": "BOS-o0BD7RI7t2w5q0ljpy9NRJ7h8vT-sjfj8HKpGXaVP17RFUswlc1dBSVPsiSZ
@@ -298,12 +298,12 @@ gSh-XhGqhxEkXMUggGOQjJc"
 }
 ```
 
-An example JWK for the Bls48581 curve where the public key is in the G2 subgroup.
+An example JWK for the BLS48581 curve where the public key is in the G2 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls48581G2",
+  "crv": "BLS48581G2",
   "x": "ANAdJhZscIOfuf06ScGr1EwKcy7IFnq4bKPRl_QpBhRtx7Hg4hvpCXXbt03L1UGv
 oZbf-pxVfOyQMaA1qsGAHU0R6OYgUIpc-wE3KKZFLtzfS3vKPVLSLNTm7USw7audlChzhn8g
 aG5aJc1J7j0SfN0pn5TPLVA6PE47cMhHWHEirUzpkFxLTKYNqNoQVOZxuqcJs6UAC9ZwJaIi
@@ -331,12 +331,12 @@ sPIIpLBx7bRCtwhkpioKmMM"
 }
 ```
 
-Another example of a different JWK for the Bls48581 curve where the public key is in the G2 subgroup.
+Another example of a different JWK for the BLS48581 curve where the public key is in the G2 subgroup.
 
 ```
 {
   "kty": "EC",
-  "crv": "Bls48581G2",
+  "crv": "BLS48581G2",
   "x": "BgaTERiH8qDLfouNR44GOkiE2EOCgCbLxWEI3ocyXPLxeEtCCVUtnj3sQv-I3nM3
 V6IptFAoEJkLpCmMLBwyMTZ3B69p61yYBAU-fO2XyUiR0aEmWgqI-tesctbExIleiWWi221n
 wzIVUKi47E6bkNnBjvynvHMaB4lsJ0llYlsuYO7QqKXY55xSatMbTkTFncEOeEjQbDjHu96O
@@ -366,11 +366,11 @@ FUCypARd4bpHGKJmsPafn8A"
 
 # COSE_Key Examples
 
-## Bls12381 Key Pairs
+## BLS12381 Key Pairs
 
-The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the Bls12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
+The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the BLS12381 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
 
-An example COSE_Key for the Bls12381 curve where the public key is in the G1 subgroup expressed as an octet string.
+An example COSE_Key for the BLS12381 curve where the public key is in the G1 subgroup expressed as an octet string.
 
 ```
 a50101200d21583011de060462d56ac129e1e8cfcf8e02be595b4e575f2cb726d9070826
@@ -393,7 +393,7 @@ Below is the above CBOR rendered in diagnostic view.
 }
 ```
 
-Another example of a different COSE_Key for the Bls12381 curve where the public key is in the G1 subgroup expressed as an octet string.
+Another example of a different COSE_Key for the BLS12381 curve where the public key is in the G1 subgroup expressed as an octet string.
 
 ```
 a50101200d215830114190131a73c5e6f099711ea9cdfd388dc9d4d7d408c5503ea73f2d
@@ -416,7 +416,7 @@ B4C42692ADDD2B0C131316D85DE6BFB6',
 }
 ```
 
-An example COSE_Key for the Bls12381 curve where the public key is in the G2 subgroup expressed as an octet string.
+An example COSE_Key for the BLS12381 curve where the public key is in the G2 subgroup expressed as an octet string.
 
 ```
 a50101200e215860019003f72fb13e7f03f922fe6b1843a8e7fcdaf47031c5d007a32af7
@@ -444,7 +444,7 @@ C4664C602825810FDC71D3E03510A423015A595EA2A0A900D5EDE9FEF8B19A0E35D0E298
 }
 ```
 
-Another example of a different COSE_Key for the Bls12381 curve where the public key is in the G2 subgroup expressed as an octet string.
+Another example of a different COSE_Key for the BLS12381 curve where the public key is in the G2 subgroup expressed as an octet string.
 
 ```
 a50101200e21586003b81526b001b41701632609ee1285cf09549e2228caa0775a052ae6
@@ -472,11 +472,11 @@ C6E754E865A9F01B3ED511D86673A6D8109DC94D0840FF539FA2D175B2DEA6BD3484D91A
 }
 ```
 
-## Bls48581 Key Pairs
+## BLS48581 Key Pairs
 
-The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the Bls48581 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
+The following examples showcase COSE_key examples for both the G1 and G2 subgroups of the BLS48581 curve. Note, the examples also include the corresponding private key, expressed through the inclusion of the “d” (-4) parameter.
 
-An example COSE_Key for the Bls48581 curve where the public key is in the G1 subgroup expressed as an octet string.
+An example COSE_Key for the BLS48581 curve where the public key is in the G1 subgroup expressed as an octet string.
 
 ```
 a50101200f2158490522e96ca7ca18bf31598a15d39aa95c6fe56da85a7bc8e8108f193c
@@ -505,7 +505,7 @@ EAC0CAD87E',
 }
 ```
 
-Another example of a different COSE_Key for the Bls48581 curve where the public key is in the G1 subgroup expressed as an octet string.
+Another example of a different COSE_Key for the BLS48581 curve where the public key is in the G1 subgroup expressed as an octet string.
 
 ```
 a50101200f215849063453ed5493e2f3254e3eb2305ef7425120e574876107e500930f7f
@@ -534,7 +534,7 @@ BDA8BF00E91AA8D4EB1D8864EB0B78D84B798B387A7ECE0FB20E62BFEC70FC451E12F63D
 }
 ```
 
-An example COSE_Key for the Bls48581 curve where the public key is in the G2 subgroup expressed as an octet string.
+An example COSE_Key for the BLS48581 curve where the public key is in the G2 subgroup expressed as an octet string.
 
 ```
 a5010120102159024800d01d26166c70839fb9fd3a49c1abd44c0a732ec8167ab86ca3d1
@@ -619,7 +619,7 @@ BA1956E9604AF78EE661BCA06F2F324B186450AF1C460CF0C603F8AD351267C3F12D69F7
 }
 ```
 
-Another example of a different COSE_Key for the Bls48581 curve where the public key is in the G2 subgroup expressed as an octet string.
+Another example of a different COSE_Key for the BLS48581 curve where the public key is in the G2 subgroup expressed as an octet string.
 
 
 ```
@@ -713,6 +713,10 @@ David Waite
 for his contributions to the specification.
 
 # Document History
+
+-05
+
+* Replaced instances of "Bls" with "BLS" since B. L., and S. are people's initials, just like "RSA" is three people's initials.
 
 -04
 
