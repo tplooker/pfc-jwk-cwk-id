@@ -716,7 +716,7 @@ for his contributions to the specification.
 
 -05
 
-* Replaced instances of "Bls" with "BLS" since B. L., and S. are people's initials, just like "RSA" is three people's initials.
+* Replaced instances of "Bls" with "BLS" since B., L., and S. are people's initials, just like "RSA" is three people's initials.
 
 -04
 
