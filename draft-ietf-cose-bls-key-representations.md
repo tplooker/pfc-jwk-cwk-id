@@ -47,13 +47,13 @@ There are a variety of applications for pairing based cryptography including sch
 
 This branch of cryptography has also been used to develop privacy-preserving cryptographic hardware attestations schemes, including the Elliptic Curve Direct Anonymous Attestation (ECDAA) in the Trusted Platform Modules [@TPM] specified by the Trusted Computing Group. Further work on similar schemes has also occurred at the FIDO Alliance [@ECDAA]. Similarly, Intel released [@EPID] which provides a solution to remote hardware attestation for Intel Software Guard Extension (SGX) enabled environments.
 
-More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@!id.draft.bls-signature], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
+More recently, applications of pairing based cryptography using the Barreto-Lynn-Scott curves include the standardization effort for BLS Signatures [@id.draft.bls-signature], which are used extensively in multiple blockchain projects due to their unique signature aggregation properties, including [Ethereum] [DFINITY] [Algorand]. Additionally, efforts are under way to standardize the general purpose short group signature scheme of BBS Signatures [@BBS], which features novel properties such as multi-message signing and selective disclosure alongside zero knowledge proving. It is intended that this draft will help with these efforts by standardizing the associated cryptographic key representation in the popular formats of JWK and COSE_Key.
 
 Other relevant work to this draft includes [@JWP] which is extending the JOSE family of specifications to provide support for representing a variety of new proof based cryptographic schemes such as [@BBS] which as referred to above uses the Barreto-Lynn-Scott curves.
 
 There are multiple different pairing-friendly curves in active use; however, this draft focuses on a definition for the Barreto-Lynn-Scott curves due to them being the most "widely used" and "efficient" whilst achieving 128-bit and 256-bit security (BLS12-381 and BLS48-581 respectively).
 
-More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@!id.draft.pairing-friendly-curves].
+More extensive discussion on the broader application of pairing based cryptography and the assessment of various elliptic curves (including the BLS family) can be found in [@id.draft.pairing-friendly-curves].
 
 # Conventions and Definitions
 
@@ -98,7 +98,7 @@ BLS48581G2      | TBD (16 requested)                   | A cryptographic key on 
 
 # Security Considerations
 
-See [@!id.draft.pairing-friendly-curves] for additional details on security considerations for the curves used.  Implementers should also consider the general guidance provided in Section 9 of [@!RFC7517] and Section 17 of [@!RFC8152] when using this specification.
+See [@id.draft.pairing-friendly-curves] for additional details on security considerations for the curves used.  Implementers should also consider the general guidance provided in Section 9 of [@!RFC7517] and Section 17 of [@!RFC8152] when using this specification.
 
 Furthermore, because this specification only defines the cryptographic key representations and not the usage of these keys with specific algorithms, implementers should be aware to follow any guidance that may be provided around appropriate usage of the keys and or additional steps that may be required to validate the keys within the context of particular algorithms.
 
@@ -714,6 +714,11 @@ for his contributions to the specification.
 
 # Document History
 
+-06
+
+* Updated draft-irtf-cfrg-bbs-signatures reference.
+* Made draft-irtf-cfrg-bls-signature and draft-irtf-cfrg-pairing-friendly-curves references informative.
+
 -05
 
 * Replaced instances of "Bls" with "BLS" since B., L., and S. are people's initials, just like "RSA" is three people's initials.
@@ -808,11 +813,11 @@ for his contributions to the specification.
   </front>
 </reference>
 
-<reference anchor="BBS" target="https://www.ietf.org/archive/id/draft-irtf-cfrg-bbs-signatures-05.html">
+<reference anchor="BBS" target="https://www.ietf.org/archive/id/draft-irtf-cfrg-bbs-signatures-07.html">
   <front>
     <title>The BBS Signature Scheme</title>
    <author><organization>IETF CFRG</organization></author>
-    <date day="21" month="December" year="2023"/>
+    <date day="23" month="September" year="2024"/>
   </front>
 </reference>
 
